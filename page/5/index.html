@@ -1,0 +1,372 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Dyxin - 学会与自己和解</title><meta name="author" content="dyx"><meta name="copyright" content="dyx"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta property="og:type" content="website">
+<meta property="og:title" content="Dyxin">
+<meta property="og:url" content="http://dangyuxin.github.io/page/5/index.html">
+<meta property="og:site_name" content="Dyxin">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://p3-pc.douyinpic.com/img/aweme-avatar/tos-cn-i-0813c001_oQVMIAnrIBEDAAPZbBAAQEAelfjxNss2b6F7Ef~c5_300x300.jpeg?from=2956013662">
+<meta property="article:author" content="dyx">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://p3-pc.douyinpic.com/img/aweme-avatar/tos-cn-i-0813c001_oQVMIAnrIBEDAAPZbBAAQEAelfjxNss2b6F7Ef~c5_300x300.jpeg?from=2956013662"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://dangyuxin.github.io/page/5/index.html"><link rel="preconnect"/><link rel="stylesheet" href="/css/index.css?v=5.7.0"><link rel="stylesheet" href="/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css?v=7.3.1"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        const data = { value }
+
+        if (ttl != null) {
+          data.expiry = Date.now() + ttl * 86400000
+        }
+
+        localStorage.setItem(key, JSON.stringify(data))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js?v=4.13.0',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Dyxin',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://p3-pc.douyinpic.com/img/aweme-avatar/tos-cn-i-0813c001_oQVMIAnrIBEDAAPZbBAAQEAelfjxNss2b6F7Ef~c5_300x300.jpeg?from=2956013662" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">54</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://dyx-bucket.oss-cn-beijing.aliyuncs.com/2e339a3a385a4fcb89e102016eb40b61.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Dyxin</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Dyxin</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/dangyuxin" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://www.douyin.com/user/MS4wLjABAAAAabKSuqKzuKHByiNDDVLzJrbfB-5yw67yU4_9_9HcEjM" target="_blank" title="Douyin"><i class="fab fa-tiktok" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/173312348?spm_id_from=333.337.0.0" target="_blank" title="Bilibili"><i class="fab fa-bilibili" style="color: #24292e;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/Redis%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E9%AB%98%E5%8F%AF%E7%94%A8.html" title="Redis实现服务高可用">Redis实现服务高可用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-27T06:01:29.000Z" title="发表于 2023-04-27 14:01:29">2023-04-27</time></span></div><div class="content">Redis实现服务高可用1、主从复制：主服务器可进行读写操作，当发生写操作时自动将写操作同步给从，而从一般只读并接受主服务器同步过来写操作命令，然后执行这条命令。主从服务器间的命令复制异步进行。 2、哨兵模式：解决主从服务器宕机时需要手动恢复的问题，可以监控主从服务器，且提供主从节点故障转移的功能 3、切片集群模式：当Redis缓存数据量大到一台服务器无法缓存时就需要用Redis切片集群方案，将数据分在不同服务器上来降低系统对单主节点的依赖，提高Redis服务读写性能 主从复制实现主从服务器第一次同步时采用全量复制，此时主服务器会两个耗时的地方分别是生成 RDB 文件和传输 RDB 文件。为避免过多从服务器和主服务器进行全量复制，可以把一部分从服务器升级为「经理角色」，让它也有自己的从服务器，通过这样可以分摊主服务器的压力。 第一次同步完成后，主从服务器都会维护着一个长连接，主服务器在接收到写操作命令后就会通过这个连接将写命令传播给从服务器，来保证主从服务器的数据一致性。 如果遇到网络断开，增量复制就可以上场了，不过这个还跟 repl_backlog_size 这个大小有关系。如...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/Redis%E5%AE%9E%E7%8E%B0%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81.html" title="Redis实现分布式锁">Redis实现分布式锁</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-23T06:01:29.000Z" title="发表于 2023-04-23 14:01:29">2023-04-23</time></span></div><div class="content">Redis实现分布式锁分布式锁：用于分布式环境下并发控制的一种机制，用于控制某个资源在同一时刻只能被一个应用所使用。 SET命令有个NX参数可实现「key不存在才插入」，所以可以用它来实现分布式锁：  key不存在则显示插入成功，可用来表示加锁成功 key存在则显示插入失败，可用来表示加锁失败  防止死锁：设置一个超时时间。PX 10000 表示设置 lock_key 的过期时间为 10s，避免客户端发生异常而无法释放锁。 redis实现分布式锁的缺点1、超时时间不好控制（可基于续约方式设置超时时间：先给锁设一个超时时间然后启动一个守护线程，让守护线程在一段时间后重新设置这个锁的超时时间） 2、Redis主从复制模式中的数据是异步复制的，会导致分布式锁的不可靠性（使用红锁解决：让客户端和多个独立的Redis节点依次请求申请加锁，如果客户端能够和半数以上的节点成功地完成加锁操作，那么就认为客户端成功地获得分布式锁，否则加锁失败） </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/Linux.html" title="Linux">Linux</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-23T04:49:03.000Z" title="发表于 2023-04-23 12:49:03">2023-04-23</time></span></div><div class="content">初探 LinuxLinux 简介Linux 是一种开放源代码的 Unix 操作系统，由 Linus Torvalds 在 1991 年创建。它是一个多用户、多任务的操作系统，被广泛应用于服务器和嵌入式设备。 Linux 诞生Linux 诞生于 1991 年，由 Linus Torvalds 在赫尔辛基大学创造。他发布了 Linux 内核的第一个版本，这个版本只是一个用于学术用途的小型操作系统内核。 常见的 Linux 发行版本一些常见的 Linux 发行版本包括 Ubuntu、CentOS、Debian、Fedora 和 Arch Linux 等。 Linux 文件系统Linux 文件系统简介Linux 文件系统是指用于组织和存储计算机文件数据的方法和数据结构。常见的 Linux 文件系统包括 ext4、XFS、Btrfs 等。 inode 介绍inode 是 Linux 文件系统中用于存储文件元数据的数据结构，包括文件的权限、所有者、大小、创建时间等信息。 硬链接和软链接硬链接硬链接是文件系统中的一个指向文件的链接，它与原文件有相同的 inode，可以共享文件数据。 软链接软链...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/redis%E8%A7%A3%E5%86%B3%E5%93%88%E5%B8%8C%E5%86%B2%E7%AA%81.html" title="redis解决哈希冲突">redis解决哈希冲突</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-21T06:01:29.000Z" title="发表于 2023-04-21 14:01:29">2023-04-21</time></span></div><div class="content">redis解决哈希冲突链式哈希。每个哈希表节点都有一个 next 指针用于指向下一个哈希表节点，因此多个哈希表节点可以用next指针构成一个单项链表，被分配到同一个哈希桶上的多个节点可以用这个单项链表连接起来，这样就解决了哈希冲突。 局限性：随着链表长度的增加，在查询这一位置上的数据的耗时就会增加，毕竟链表的查询的时间复杂度是 O(n)。要想解决问题就需要进行rehash，也就是对哈希表大小进行扩展。 rehash实现在实际使用哈希表时，Redis 定义一个 dict 结构体，这个结构体里定义了两个哈希表（ht[2]）。 在正常服务请求阶段，插入的数据都会写入到「哈希表 1」，此时的「哈希表 2 」 并没有被分配空间。随着数据逐步增多，触发rehash，这个过程分为三步：  给「哈希表 2」 分配空间，一般会比「哈希表 1」 大 2 倍； 将「哈希表 1 」的数据迁移到「哈希表 2」 中； 迁移完成后，「哈希表 1 」的空间会被释放，并把「哈希表 2」 设置为「哈希表 1」，然后在「哈希表 2」 新创建一个空白的哈希表，为下次 rehash 做准备。  局限性：第二步如果「哈希表...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/Redis%E7%BC%93%E5%AD%98%E8%AE%BE%E8%AE%A1.html" title="Redis缓存设计">Redis缓存设计</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-19T06:01:29.000Z" title="发表于 2023-04-19 14:01:29">2023-04-19</time></span></div><div class="content">Redis缓存设计缓存雪崩大量数据同时过期，解决： 1、将缓存失效时间随机打散： 在原有失效时间上加一个随机值，这样每个缓存的过期时间都不重复也就降低了缓存集体失效的概率 2、互斥锁：如果发现访问数据不在Redis里就加个互斥锁（再设个超时时间），保证同一时间内只有一个请求来构建缓存，缓存构建完成后再释放锁。 3、后台更新缓存： 后台线程不仅负责定时更新缓存，而且也负责频繁地检测缓存是否有效，检测到缓存失效就马上从数据库读取数据并更新到缓存；或者是在业务线程发现缓存数据失效后，通过消息队列发送一条消息通知后台线程更新缓存，后台线程收到后在更新缓存前可以判断缓存是否存在，存在就不执行更新缓存操作；不存在就读取数据库数据并加载到缓存 缓存击穿某热点数据过期且有大量请求访问该热点数据，解决： 1、互斥锁：保证同一时间只有一个业务线程请求缓存，未能获取互斥锁的请求，要么等待锁释放后重新读取缓存，要么就返回空或者默认值 2、不给热点数据设过期时间，由后台异步更新缓存，或者在热点数据准备要过期前，提前通知后台线程更新缓存以及重新设置过期时间 缓存穿透访问的数据既不在缓存也不在数据库中（非法数...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/redis%E6%8C%81%E4%B9%85%E5%8C%96.html" title="redis持久化">redis持久化</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-16T06:01:29.000Z" title="发表于 2023-04-16 14:01:29">2023-04-16</time></span></div><div class="content">redis持久化 AOF 日志：记录写操作命令，读操作命令不被记录（如何避免文件过大：添加AOF重写机制[后台子进程干]：读取当前数据库中的所有kv对，然后将每一个kv对用一条命令记录到新的AOF文件，等到全部记录完后就将新文件替换掉现有的AOF文件） RDB 快照：将某一时刻的内存数据以二进制方式写入磁盘； 混合持久化方式：前半部分是 RDB 格式的全量数据，后半部分是 AOF 格式的增量数据。（优点：结合RDB和AOF持久化的优点，开头为 RDB 的格式，使得 Redis 可以更快的启动，同时结合 AOF 的优点，有减低了大量数据丢失的风险。缺点：AOF 文件中添加了RDB格式内容使得文件可读性变差；兼容性差，如果开启混合持久化，那么此混合持久化 AOF 文件就不能用Redis4.0前版本）  大Key对AOF日志的影响 AOF日志写回磁盘策略 Always：每次写操作命令执行完后，同步将 AOF 日志数据写回硬盘（每次写入 AOF文件数据后就执行 fsync()） Everysec：每次写操作命令执行完后，先将命令写入到 AOF 文件的内核缓冲区，然后每隔一秒将缓冲区里的内...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/Redis%20%E8%BF%87%E6%9C%9F%E5%88%A0%E9%99%A4%E4%B8%8E%E5%86%85%E5%AD%98%E6%B7%98%E6%B1%B0.html" title="Redis 过期删除与内存淘汰">Redis 过期删除与内存淘汰</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-14T06:01:29.000Z" title="发表于 2023-04-14 14:01:29">2023-04-14</time></span></div><div class="content">Redis 过期删除与内存淘汰过期删除策略每当对一个key设了过期时间时Redis会把该key带上过期时间存到一个过期字典中，里面保存了数据库中所有 key 的过期时间。当查一个key时Redis先检查该key是否存在过期字典中：如果不在就正常读取；如果在则会获取过期时间然后与当前系统时间比对，如果比系统时间大就没过期，否则判定该key已过期 Redis的过期删除策略是「惰性删除+定期删除」 惰性删除策略不主动删除过期键，每次从数据库访问key时检测是否过期，过期则删除该key 【优点】：每次访问时才检查key是否过期，所以只会用很少的系统资源，对CPU时间最友好 【缺点】：如果一个key已过期，而这个key又仍留在数据库中，那么只要这个过期key一直没被访问，它所占用的内存就不会释放，造成了一定的内存空间浪费，对内存不友好 定期删除策略隔一段时间「随机」从数据库中取一定量的key检查，并删除其中的过期key（如果「已过期key数」占比「随机抽取key数」大于25%，则继续继续抽取；否则停止继续删除过期key然后等下一轮再检查） 【优点】：通过限制删除操作执行的时长和频率，来减少...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/%E6%80%8E%E4%B9%88%E5%88%A4%E6%96%AD%20Redis%20%E6%9F%90%E4%B8%AA%E8%8A%82%E7%82%B9%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8%E5%B7%A5%E4%BD%9C%EF%BC%9F.html" title="怎么判断 Redis 某个节点是否正常工作？">怎么判断 Redis 某个节点是否正常工作？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-13T06:01:29.000Z" title="发表于 2023-04-13 14:01:29">2023-04-13</time></span></div><div class="content">怎么判断 Redis 某个节点是否正常工作？通过互相的 ping-pong 心态检测机制，如果有一半以上的节点去 ping 一个节点的时候没有 pong 回应，集群就会认为这个节点挂掉了，会断开与这个节点的连接。  主节点：默认每隔 10 秒对从节点发送 ping 命令，判断从节点的存活性和连接状态 从节点：每1秒发送 replconf ack{offset} 命令，给主节点上报自身当前的复制偏移量，目的是为实时监测主从节点网络状态以及上报自身复制偏移量， 检查复制数据是否丢失， 如果从节点数据丢失， 再从主节点的复制缓冲区中拉取丢失数据  </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/Markdown%E8%AF%AD%E6%B3%95.html" title="Markdown语法">Markdown语法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-10T06:01:29.000Z" title="发表于 2023-04-10 14:01:29">2023-04-10</time></span></div><div class="content">Markdown 语法指南1. 标题使用 # 符号表示标题，数量代表标题级别，最多支持六级标题。 123456# 一级标题## 二级标题### 三级标题#### 四级标题##### 五级标题###### 六级标题  2. 段落和换行段落之间用空行分隔，如果需要强制换行，可以在行尾添加两个空格。 123这是第一段。这是第二段。  3. 列表无序列表使用 -、+ 或 * 表示无序列表项。 123- 项目一- 项目二- 项目三  有序列表使用数字后跟英文句点表示有序列表项。 1231. 项目一2. 项目二3. 项目三   4. 链接和图片链接使用 [文本](链接) 格式来创建链接。 1[Markdown 官方文档](https://www.markdownguide.org/)  图片使用 ![alt 文本](图片链接) 格式来插入图片。 1![Markdown 图标](https://markdown-here.com/img/icon256.png)  5. 强调和引用使用 *斜体* 或 _斜体_ 表示斜体，使用 **粗体** 或 __粗体__ 表示粗体。 1234*斜体*_斜体_...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/redis%E5%B8%B8%E8%A7%81%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html" title="redis常见数据结构">redis常见数据结构</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-08T06:01:29.000Z" title="发表于 2023-04-08 14:01:29">2023-04-08</time></span></div><div class="content">redis常见数据结构1、String  缓存对象（直接缓存整个对象的JSON、采用将key进行分离为user:ID）、常规计数（原子性）、分布式锁、共享session信息 SDS（简单动态字符串），SDS不仅可以保存文本数据还可以保存二进制数据，拼接字符串不会造成缓冲区溢出，空间不够会自动扩容  2、List  消息队列（但是有两个问题：1. 生产者需要自行实现全局唯一 ID；2. 不能以消费组形式消费数据） 之前是由双向链表或压缩列表实现，列表元素个数小于512个且列表每个元素值都小于64字节时用压缩列表，否则用双向列表；后来3.2版本后redis用快表实现  快表压缩列表的不足：虽然通过紧凑型内存布局节省了内存开销，但如果保存的元素数量增加或者元素变大了，压缩列表会有「连锁更新」风险，一旦发生会造成性能下降。快表通过控制每个链表节点中的压缩列表的大小或者元素个数，来规避连锁更新的问题。因为压缩列表元素越少或越小，连锁更新带来的影响就越小，从而提供了更好的访问性能 3、Hash  缓存对象、购物车 列表元素个数小于512个且列表每个元素值都小于64字节时用压缩列表，否则用哈希...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/4/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#content-inner">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/6/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://p3-pc.douyinpic.com/img/aweme-avatar/tos-cn-i-0813c001_oQVMIAnrIBEDAAPZbBAAQEAelfjxNss2b6F7Ef~c5_300x300.jpeg?from=2956013662" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">dyx</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">54</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/dangyuxin"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/dangyuxin" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://www.douyin.com/user/MS4wLjABAAAAabKSuqKzuKHByiNDDVLzJrbfB-5yw67yU4_9_9HcEjM" target="_blank" title="Douyin"><i class="fab fa-tiktok" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/173312348?spm_id_from=333.337.0.0" target="_blank" title="Bilibili"><i class="fab fa-bilibili" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/%E7%88%B1%E7%9A%84%E4%BA%94%E7%A7%8D%E8%83%BD%E5%8A%9B.html" title="Ne-外向直觉-八维功能解析">Ne-外向直觉-八维功能解析</a><time datetime="2026-08-27T05:11:25.000Z" title="发表于 2026-08-27 13:11:25">2026-08-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/%E6%A2%A6%E7%9A%84%E8%A7%A3%E6%9E%90.html" title="梦的解析">梦的解析</a><time datetime="2026-08-16T13:59:11.000Z" title="发表于 2026-08-16 21:59:11">2026-08-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/%E7%88%B1%E4%B8%8E%E4%BE%9D%E6%81%8B%E7%9A%84%E5%8A%9B%E9%87%8F.html" title="爱与依恋的力量">爱与依恋的力量</a><time datetime="2026-08-16T13:55:18.000Z" title="发表于 2026-08-16 21:55:18">2026-08-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/%E7%88%B1%E7%9A%84%E8%89%BA%E6%9C%AF.html" title="爱的艺术">爱的艺术</a><time datetime="2026-08-16T13:43:21.000Z" title="发表于 2026-08-16 21:43:21">2026-08-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/%E7%88%B1%E7%9A%84%E4%BA%94%E7%A7%8D%E8%AF%AD%E8%A8%80.html" title="爱的五种语言">爱的五种语言</a><time datetime="2026-08-14T11:12:19.000Z" title="发表于 2026-08-14 19:12:19">2026-08-14</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/MySQL/"><span class="card-category-list-name">MySQL</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Redis/"><span class="card-category-list-name">Redis</span><span class="card-category-list-count">8</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Spring/"><span class="card-category-list-name">Spring</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/"><span class="card-category-list-name">工具学习</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BF%83%E7%90%86%E5%AD%A6/"><span class="card-category-list-name">心理学</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><span class="card-category-list-name">操作系统</span><span class="card-category-list-count">13</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/"><span class="card-category-list-name">编程</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BD%91%E7%BB%9C/"><span class="card-category-list-name">网络</span><span class="card-category-list-count">7</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/github/" style="font-size: 1.2em; color: #999da3">github</a> <a href="/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" style="font-size: 1.1em; color: #999">内存管理</a> <a href="/tags/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB/" style="font-size: 1.5em; color: #99a9bf">亲密关系</a> <a href="/tags/MySQL%E6%97%A5%E5%BF%97/" style="font-size: 1.2em; color: #999da3">MySQL日志</a> <a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 1.3em; color: #99a1ac">C语言</a> <a href="/tags/%E9%9B%B6%E6%8B%B7%E8%B4%9D/" style="font-size: 1.1em; color: #999">零拷贝</a> <a href="/tags/MBTI/" style="font-size: 1.1em; color: #999">MBTI</a> <a href="/tags/%E9%94%81/" style="font-size: 1.2em; color: #999da3">锁</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.2em; color: #999da3">算法</a> <a href="/tags/docker/" style="font-size: 1.1em; color: #999">docker</a> <a href="/tags/Linux/" style="font-size: 1.4em; color: #99a5b6">Linux</a> <a href="/tags/B-%E6%A0%91/" style="font-size: 1.1em; color: #999">B+树</a> <a href="/tags/%E4%BA%BA%E6%A0%BC%E5%BF%83%E7%90%86%E5%AD%A6/" style="font-size: 1.1em; color: #999">人格心理学</a> <a href="/tags/MySQL%E4%BA%8B%E5%8A%A1/" style="font-size: 1.1em; color: #999">MySQL事务</a> <a href="/tags/git/" style="font-size: 1.2em; color: #999da3">git</a> <a href="/tags/Linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/" style="font-size: 1.3em; color: #99a1ac">Linux系统编程</a> <a href="/tags/zsh/" style="font-size: 1.1em; color: #999">zsh</a> <a href="/tags/MySQL/" style="font-size: 1.1em; color: #999">MySQL</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a></div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/08/">
+            <span class="card-archive-list-date">
+              八月 2026
+            </span>
+            <span class="card-archive-list-count">7</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/05/">
+            <span class="card-archive-list-date">
+              五月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/04/">
+            <span class="card-archive-list-date">
+              四月 2024
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/03/">
+            <span class="card-archive-list-date">
+              三月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/01/">
+            <span class="card-archive-list-date">
+              一月 2024
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/12/">
+            <span class="card-archive-list-date">
+              十二月 2023
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/11/">
+            <span class="card-archive-list-date">
+              十一月 2023
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/10/">
+            <span class="card-archive-list-date">
+              十月 2023
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">54</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">64.6k</div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-08-27T05:32:25.514Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2022 - 2026 By dyx</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.0"></script><script src="/js/main.js?v=5.7.0"></script><script src="/js/tw_cn.js?v=5.7.0"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('/pluginsSrc/typed.js/dist/typed.umd.js?v=3.0.0').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["今日事&#44;今日毕","学会与自己和解","怀古莫要伤今，行走世间，本就是一种积累"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed && typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["今日事&#44;今日毕","学会与自己和解","怀古莫要伤今，行走世间，本就是一种积累"])
+}
+typedJSFn.run(subtitleType)</script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="/pluginsSrc/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js?v=1.1.6"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="/pluginsSrc/butterfly-extsrc/dist/canvas-nest.min.js?v=1.1.6"></script><script id="click-heart" src="/pluginsSrc/butterfly-extsrc/dist/click-heart.min.js?v=1.1.6" async="async" mobile="true"></script><script src="/pluginsSrc/pjax/pjax.min.js?v=0.2.8" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:description\"]","link[rel=\"canonical\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"]):not([data-fancybox])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      if (!item.parentNode) return
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || ''
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    const responseURL = e.request && e.request.responseURL
+    if (e.request && e.request.status === 404) {
+      true
+        ? pjax.loadUrl('/404.html')
+        : responseURL && (window.location.href = responseURL)
+    } else if (responseURL) {
+      window.location.href = responseURL
+    }
+  })
+})</script></div></body></html>

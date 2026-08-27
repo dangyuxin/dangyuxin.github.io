@@ -1,0 +1,381 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Dyxin - 学会与自己和解</title><meta name="author" content="dyx"><meta name="copyright" content="dyx"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta property="og:type" content="website">
+<meta property="og:title" content="Dyxin">
+<meta property="og:url" content="http://dangyuxin.github.io/index.html">
+<meta property="og:site_name" content="Dyxin">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://p3-pc.douyinpic.com/img/aweme-avatar/tos-cn-i-0813c001_oQVMIAnrIBEDAAPZbBAAQEAelfjxNss2b6F7Ef~c5_300x300.jpeg?from=2956013662">
+<meta property="article:author" content="dyx">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://p3-pc.douyinpic.com/img/aweme-avatar/tos-cn-i-0813c001_oQVMIAnrIBEDAAPZbBAAQEAelfjxNss2b6F7Ef~c5_300x300.jpeg?from=2956013662"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Dyxin",
+  "alternateName": [
+    "学会与自己和解",
+    "dangyuxin.github.io"
+  ],
+  "url": "http://dangyuxin.github.io/"
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://dangyuxin.github.io/index.html"><link rel="preconnect"/><link rel="stylesheet" href="/css/index.css?v=5.7.0"><link rel="stylesheet" href="/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css?v=7.3.1"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        const data = { value }
+
+        if (ttl != null) {
+          data.expiry = Date.now() + ttl * 86400000
+        }
+
+        localStorage.setItem(key, JSON.stringify(data))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js?v=4.13.0',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Dyxin',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://p3-pc.douyinpic.com/img/aweme-avatar/tos-cn-i-0813c001_oQVMIAnrIBEDAAPZbBAAQEAelfjxNss2b6F7Ef~c5_300x300.jpeg?from=2956013662" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">54</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://dyx-bucket.oss-cn-beijing.aliyuncs.com/2e339a3a385a4fcb89e102016eb40b61.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Dyxin</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Dyxin</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/dangyuxin" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://www.douyin.com/user/MS4wLjABAAAAabKSuqKzuKHByiNDDVLzJrbfB-5yw67yU4_9_9HcEjM" target="_blank" title="Douyin"><i class="fab fa-tiktok" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/173312348?spm_id_from=333.337.0.0" target="_blank" title="Bilibili"><i class="fab fa-bilibili" style="color: #24292e;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/%E7%88%B1%E7%9A%84%E4%BA%94%E7%A7%8D%E8%83%BD%E5%8A%9B.html" title="Ne-外向直觉-八维功能解析">Ne-外向直觉-八维功能解析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-08-27T05:11:25.000Z" title="发表于 2026-08-27 13:11:25">2026-08-27</time></span></div><div class="content">外向直觉 Ne：在可能性之海里永不靠岸的漂流者为什么有的人永远坐不住，永远觉得”下一个想法更好”，永远能把一件普通的事，看成十种可能性的入口？答案藏在一个认知功能里——Ne，外向直觉。 认知功能从来不是贴在人身上的标签，而是一个人处理世界信息、做出判断、产生情绪反应的底层操作系统。八种功能两两成对、四组维度，共同构成了每个人独特的认知拼图。  一、Ne 是什么Ne（Extraverted Intuition，外向直觉）是一种感知功能，负责的是信息的”接收方式”，而不是判断和决策。它的内外倾属性是外倾——这意味着它的能量指向外部世界，需要借助外部的客体、语言、情境、他人的一句话作为触发点，才能启动。 如果说 Se 是”看见眼前发生了什么”，Si 是”记得过去发生过什么并与当下比对”，那么 Ne 做的事情完全不同：它看见的不是”发生了什么”，而是”可能会发生什么、还可以是什么、这背后还藏着什么”。它不停留在客体本身，而是把客体当作一个跳板，向外辐射出无数条平行的可能性线索，然后在这些线索之间跳跃、连接、重组。 一句话概括：Ne 是人类用来”从一个具体的点，看见一整张可能性的网”的认知...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/%E6%A2%A6%E7%9A%84%E8%A7%A3%E6%9E%90.html" title="梦的解析">梦的解析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-08-16T13:59:11.000Z" title="发表于 2026-08-16 21:59:11">2026-08-16</time></span></div><div class="content">《梦的解析》一、书籍基础信息 书名：《梦的解析》（德文：Die Traumdeutung）  作者：西格蒙德·弗洛伊德，精神分析学派创始人  出版时间：1900年（正式奠定精神分析理论体系）  核心定位：人类首部系统解析梦境心理机制的著作，打破“梦境无意义、超自然”的传统认知，将梦境纳入科学心理学研究范畴  全书终极核心命题：梦是潜意识欲望的伪装满足，所有梦境皆有心理意义，无偶然、无随机、无荒诞，看似混乱的梦境均是心理活动的刻意加工结果   二、全书整体框架（原著七章核心脉络）全书摒弃传统解梦的玄学套路，从历史批判、个案实证、机制拆解、心理溯源、理论升华五个维度，完整构建梦境心理学体系，七章核心内容层层递进：  第一章：梦的科学文献综述：批判过往梦境研究的误区，否定“梦境是躯体刺激反应、精神错乱、无意义幻象”的主流观点，提出梦境是独立的心理现象，具备可分析、可溯源的心理逻辑。  第二章：梦的解析方法——个案实证：以弗洛伊德经典「伊尔玛注射梦」为核心案例，首次落地自由联想解梦法，证明梦境并非凭空产生，而是潜藏着梦者未被察觉的心理诉求。  第三章：梦是欲望的满足：全书核心立论章节，明...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/%E7%88%B1%E4%B8%8E%E4%BE%9D%E6%81%8B%E7%9A%84%E5%8A%9B%E9%87%8F.html" title="爱与依恋的力量">爱与依恋的力量</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-08-16T13:55:18.000Z" title="发表于 2026-08-16 21:55:18">2026-08-16</time></span></div><div class="content">《爱与依恋的力量》一、核心主旨本书核心观点：依恋是人类与生俱来的核心心理需求，真挚的爱与安全的依恋关系，是人类心理健康、情绪稳定、人格健全的底层基石。人的一生所有亲密关系、情绪模式、社交行为、抗压能力，甚至自我认知的形成，都根植于早期依恋体验。爱与依恋并非单纯的情感感受，而是一种具备治愈、支撑、重塑人生的强大心理力量，既能疗愈童年创伤，也能支撑人对抗人生困境、构建完整自我。 二、核心概念定义1. 依恋的本质依恋是个体与重要他人（父母、伴侣、亲人）之间形成的持久、稳定的情感联结，是人类进化而来的生存本能。不同于普通的喜欢与依赖，依恋包含安全感、信任感、归属感三大核心要素，是所有人际亲密关系的底层逻辑。 2. 爱与依恋的关联依恋是爱的底层结构，爱是依恋的外在表达。没有健康的依恋，爱会变得空洞、偏执、失控；没有真诚的爱，依恋关系会冰冷、脆弱、缺乏温度。健康的双向依恋，是高质量亲密关系的核心内核。 三、依恋的四大类型及行为特征书中基于早期养育模式，将人的依恋类型划分为四类，且童年依恋模式会持续影响成年后的婚恋、亲子、社交关系，同时所有依恋模式均可通过后天觉察与修复重塑。 1. 安全型依恋...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/%E7%88%B1%E7%9A%84%E8%89%BA%E6%9C%AF.html" title="爱的艺术">爱的艺术</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-08-16T13:43:21.000Z" title="发表于 2026-08-16 21:43:21">2026-08-16</time></span></div><div class="content">《爱的艺术》一、书籍核心主旨《爱的艺术》是心理学家艾里希·弗洛姆的经典著作，全书推翻了大众对爱情的固有认知，提出颠覆性核心观点：爱不是一种偶然降临的情绪、不是靠缘分遇见对的人，而是一门需要学习、修炼、实操的艺术与能力。如同绘画、写作、行医一般，需要掌握理论、持续练习，才能拥有成熟的爱。 绝大多数人爱而不得、感情内耗、亲密关系破裂，根源从来不是“遇人不淑”，而是自身缺乏爱人的能力。 二、大众关于爱的三大致命误区误区1：把“被爱”当作爱的核心，忽视“去爱”的能力多数人毕生都在努力让自己变得优秀、好看、有钱、懂事，目的是被别人喜欢，却从未学习如何主动去爱、付出、经营关系。永远处于被动等待的状态，只会索取情绪价值、享受被照顾，最终注定无法拥有长久的爱。 误区2：把“爱的对象”当作关键，忽略自身爱的能力人们普遍认为：换一个合适的伴侣、三观契合的人，就能拥有完美的爱情。但事实是，如果你自身人格不成熟、不会爱人，换多少人、谈多少次恋爱，结局都是一样。爱不是匹配问题，是能力问题。 误区3：混淆“激情迷恋”与“成熟的爱”一见钟情、心动、暧昧、新鲜感、占有欲，都是短暂的生理情欲与情绪冲动，是坠入爱河...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/%E7%88%B1%E7%9A%84%E4%BA%94%E7%A7%8D%E8%AF%AD%E8%A8%80.html" title="爱的五种语言">爱的五种语言</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-08-14T11:12:19.000Z" title="发表于 2026-08-14 19:12:19">2026-08-14</time></span></div><div class="content">《爱的五种语言》一、书籍基础信息作者：盖瑞·查普曼（婚姻咨询心理学家） 核心定位：亲密关系实操工具书 核心作用：解决情侣、夫妻相处矛盾——很多时候不是不爱，是爱的语言不通，你的付出对方接收不到。 二、两大核心底层逻辑1. 储爱箱理论每个人心里都有一个「爱的储爱箱」：  箱子满：情绪稳定、包容、有安全感、亲密感充足  箱子空：敏感、挑剔、冷战、吵架、感觉被冷落   亲密关系90%的矛盾，本质都是储爱箱长期空缺。 2. 爱的语言差异每个人天生拥有：1种主要爱语（核心刚需）+1种次要爱语。 最大误区：用自己的爱语去爱别人。 你觉得很用心、很付出，但对方完全没感觉，等同于“用中文对讲英文的人说话”，不是没输出，是对方听不懂。 3. 快速判断对方爱语的3个线索 对方平时怎么对你表达爱，他自己大概率缺什么  对方平时最常抱怨什么，就是爱的缺口  对方反复、主动想要的相处方式，就是核心爱语    三、五种爱的语言（定义+特征+实操）1. 肯定的言词核心：靠语言的认可、赞美、鼓励获得被爱感 人群特征：很在意评价，怕被否定、怕被嫌弃，一句伤人的话能内耗很久，一句真诚夸奖就能瞬间治愈。 正确实操： ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/%E7%88%B1%E7%9A%84%E4%BA%94%E7%A7%8D%E8%83%BD%E5%8A%9B.html" title="爱的五种能力">爱的五种能力</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-08-08T11:12:19.000Z" title="发表于 2026-08-08 19:12:19">2026-08-08</time></span></div><div class="content">《爱的五种能力》一、书籍核心定位作者：赵永久 这是一套中国式亲密关系实操能力体系，不讲玄学、不讲浪漫，只讲：普通人如何靠能力经营好长期感情。 核心主旨：爱情和婚姻的幸福，不靠缘分，不靠遇见对的人，靠的是五种可以后天训练的能力。 分手、冷战、内耗、反复吵架，本质不是不爱，是爱的能力缺失。  二、爱的五种能力（层层递进）顺序逻辑：先稳住自己 → 再看懂对方 → 会沟通 → 会处理矛盾 → 会经营长久关系 1. 情绪管理：爱的底层基础核心定义： 不把自己的负面情绪、原生家庭创伤、生活压力，肆意发泄在爱人身上。 通俗理解：可以有情绪，但不情绪失控伤人、不冷暴力、不冲动做决定。 无能表现（大多数人的问题）：  一点小事爆炸、翻旧账、人身攻击  生气就冷战、拉黑、提分手、说狠话  把工作委屈全部发泄给伴侣   正确能力状态：  情绪上头先暂停，不争一时对错  分得清：是我心情不好，还是对方做错了  可以冷静后沟通，不冲动摧毁关系   2. 述情能力：好好说话，不内耗核心定义： 用平静、客观、真实的方式，表达自己的感受与需求，不指责、不评判、不阴阳怪气。 无能表现：  习惯性讽刺、冷嘲热讽  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/%E9%9D%9E%E6%9A%B4%E5%8A%9B%E6%B2%9F%E9%80%9A.html" title="非暴力沟通">非暴力沟通</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-08-08T09:20:23.000Z" title="发表于 2026-08-08 17:20:23">2026-08-08</time></span></div><div class="content">非暴力沟通一、书籍基础信息 书名：《非暴力沟通》  作者：马歇尔・卢森堡  简称：NVC，又称长颈鹿语言  核心定位：一套完整的自我觉察、自我表达、倾听共情、情绪和解体系，适用于亲密关系、职场社交、家庭沟通，也可用于自我内心对话。   二、四种异化的暴力沟通（阻碍彼此理解的根源）日常冲突大多不是刻意伤人，而是固化的语言思维模式带来隐性伤害，共 4 类：  道德评判 用自身价值观否定他人人格，将行为上升为人格标签。  反面示例：你太自私、你很懒惰、你不负责任。   进行比较 通过对比消解人本身的价值，催生自卑与不满。  反面示例：别人家伴侣都懂得体贴，你怎么就不行。   回避责任 用 “不得不” 把自身选择归咎外部环境，推卸主观选择权。  反面示例：我不得不加班，全是老板逼迫我。  正向转换：我选择加班，因为我希望完成项目、保住工作。    强人所难 命令、威胁对方顺从，暗含不满足就惩罚的逻辑。关键词：应该、必须。  反面示例：你必须多陪我，不然我们就分手。    核心结论：指责、评判、标签只会激发对方防御心理，无法让人主动改变。 三、NVC 四大核心要素（全书核心框架）完整表达句...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/%E5%A6%82%E4%BD%95%E6%8A%8ABean%E5%A1%9E%E5%88%B0Spring%E5%AE%B9%E5%99%A8.html" title="如何把Bean塞到Spring容器">如何把Bean塞到Spring容器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-13T06:01:29.000Z" title="发表于 2024-05-13 14:01:29">2024-05-13</time></span></div><div class="content">如何把Bean塞到Spring容器1. 定义接口12345public interface IUserDao &#123;    String queryUserInfo();&#125;   先定义一个类似 DAO 的接口，基本这样的接口在使用 MyBatis 时还是非常常见的。后面我们会对这个接口做代理和注册。  2. 类代理实现12345678ClassLoader classLoader = Thread.currentThread().getContextClassLoader();Class&lt;?&gt;[] classes = &#123;IUserDao.class&#125;;    InvocationHandler handler = (proxy, method, args) -&gt; &quot;你被代理了 &quot; + method.getName();IUserDao userDao = (IUserDao) Proxy.newProxyInstance(classLoader, classes, handler); String res ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/docker%E4%BD%BF%E7%94%A8%E4%B8%8E%E9%85%8D%E7%BD%AE.html" title="docker使用与配置">docker使用与配置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-16T11:45:33.000Z" title="发表于 2024-04-16 19:45:33">2024-04-16</time></span></div><div class="content">Docker 环境配置 官网：https://www.docker.com - Mac、Windows、Linux 介绍：Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 Mac、Linux或Windows操作系统的机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。总之它加快构建、共享和运行现代应用程序的速度。  一、基础安装1. 查看系统的内核版本1uname -r  14.18.0-80.11.2.el8_0.x86_64   uname -r x86 64位系统，如果是32位是不能安装 docker 的  2. yum 更新到最新版本1sudo yum update  1234Last metadata expiration check: 1:15:10 ago on Sat 27 Nov 2021 04:22:53 PM CST.Dependencies resolved.Nothing to do.Complete!   sudo yum update 看到显示 Complet...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8%20Zsh.html" title="如何安装和使用 Zsh">如何安装和使用 Zsh</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-11T11:45:33.000Z" title="发表于 2024-04-11 19:45:33">2024-04-11</time></span></div><div class="content">在命令行世界中，Zsh（Z Shell）是一个备受推崇的替代品，它提供了比默认的 Bash shell 更多的功能和定制选项。Zsh具有强大的自动补全、语法高亮、主题定制等特性，让命令行体验更加愉快和高效。本篇博客将介绍如何安装和使用 Zsh，以及一些常用的定制技巧。 安装 Zsh 在 macOS 上安装macOS 用户可以使用 Homebrew 进行安装：  1brew install zsh   在 Linux 上安装  大多数 Linux 发行版都提供了 Zsh 的包管理安装方式。以 Ubuntu 为例： 1sudo apt install zsh  切换默认 Shell安装完成后，你需要将 Zsh 设置为默认的 Shell。运行以下命令： 1chsh -s $(which zsh)  然后注销并重新登录，使更改生效。 配置 ZshZsh 的配置文件位于 ~&#x2F;.zshrc。你可以编辑这个文件来定制 Zsh 的行为。  主题定制Zsh 提供了许多主题可以选择，你可以在 .zshrc 文件中设置 ZSH_THEME 变量来改变主题。一些流行的主题有：   agnost...</div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://p3-pc.douyinpic.com/img/aweme-avatar/tos-cn-i-0813c001_oQVMIAnrIBEDAAPZbBAAQEAelfjxNss2b6F7Ef~c5_300x300.jpeg?from=2956013662" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">dyx</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">54</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/dangyuxin"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/dangyuxin" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://www.douyin.com/user/MS4wLjABAAAAabKSuqKzuKHByiNDDVLzJrbfB-5yw67yU4_9_9HcEjM" target="_blank" title="Douyin"><i class="fab fa-tiktok" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/173312348?spm_id_from=333.337.0.0" target="_blank" title="Bilibili"><i class="fab fa-bilibili" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/%E7%88%B1%E7%9A%84%E4%BA%94%E7%A7%8D%E8%83%BD%E5%8A%9B.html" title="Ne-外向直觉-八维功能解析">Ne-外向直觉-八维功能解析</a><time datetime="2026-08-27T05:11:25.000Z" title="发表于 2026-08-27 13:11:25">2026-08-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/%E6%A2%A6%E7%9A%84%E8%A7%A3%E6%9E%90.html" title="梦的解析">梦的解析</a><time datetime="2026-08-16T13:59:11.000Z" title="发表于 2026-08-16 21:59:11">2026-08-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/%E7%88%B1%E4%B8%8E%E4%BE%9D%E6%81%8B%E7%9A%84%E5%8A%9B%E9%87%8F.html" title="爱与依恋的力量">爱与依恋的力量</a><time datetime="2026-08-16T13:55:18.000Z" title="发表于 2026-08-16 21:55:18">2026-08-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/%E7%88%B1%E7%9A%84%E8%89%BA%E6%9C%AF.html" title="爱的艺术">爱的艺术</a><time datetime="2026-08-16T13:43:21.000Z" title="发表于 2026-08-16 21:43:21">2026-08-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/%E7%88%B1%E7%9A%84%E4%BA%94%E7%A7%8D%E8%AF%AD%E8%A8%80.html" title="爱的五种语言">爱的五种语言</a><time datetime="2026-08-14T11:12:19.000Z" title="发表于 2026-08-14 19:12:19">2026-08-14</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/MySQL/"><span class="card-category-list-name">MySQL</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Redis/"><span class="card-category-list-name">Redis</span><span class="card-category-list-count">8</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Spring/"><span class="card-category-list-name">Spring</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/"><span class="card-category-list-name">工具学习</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BF%83%E7%90%86%E5%AD%A6/"><span class="card-category-list-name">心理学</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><span class="card-category-list-name">操作系统</span><span class="card-category-list-count">13</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/"><span class="card-category-list-name">编程</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BD%91%E7%BB%9C/"><span class="card-category-list-name">网络</span><span class="card-category-list-count">7</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/github/" style="font-size: 1.2em; color: #999da3">github</a> <a href="/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" style="font-size: 1.1em; color: #999">内存管理</a> <a href="/tags/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB/" style="font-size: 1.5em; color: #99a9bf">亲密关系</a> <a href="/tags/MySQL%E6%97%A5%E5%BF%97/" style="font-size: 1.2em; color: #999da3">MySQL日志</a> <a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 1.3em; color: #99a1ac">C语言</a> <a href="/tags/%E9%9B%B6%E6%8B%B7%E8%B4%9D/" style="font-size: 1.1em; color: #999">零拷贝</a> <a href="/tags/MBTI/" style="font-size: 1.1em; color: #999">MBTI</a> <a href="/tags/%E9%94%81/" style="font-size: 1.2em; color: #999da3">锁</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.2em; color: #999da3">算法</a> <a href="/tags/docker/" style="font-size: 1.1em; color: #999">docker</a> <a href="/tags/Linux/" style="font-size: 1.4em; color: #99a5b6">Linux</a> <a href="/tags/B-%E6%A0%91/" style="font-size: 1.1em; color: #999">B+树</a> <a href="/tags/%E4%BA%BA%E6%A0%BC%E5%BF%83%E7%90%86%E5%AD%A6/" style="font-size: 1.1em; color: #999">人格心理学</a> <a href="/tags/MySQL%E4%BA%8B%E5%8A%A1/" style="font-size: 1.1em; color: #999">MySQL事务</a> <a href="/tags/git/" style="font-size: 1.2em; color: #999da3">git</a> <a href="/tags/Linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/" style="font-size: 1.3em; color: #99a1ac">Linux系统编程</a> <a href="/tags/zsh/" style="font-size: 1.1em; color: #999">zsh</a> <a href="/tags/MySQL/" style="font-size: 1.1em; color: #999">MySQL</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a></div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/08/">
+            <span class="card-archive-list-date">
+              八月 2026
+            </span>
+            <span class="card-archive-list-count">7</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/05/">
+            <span class="card-archive-list-date">
+              五月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/04/">
+            <span class="card-archive-list-date">
+              四月 2024
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/03/">
+            <span class="card-archive-list-date">
+              三月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/01/">
+            <span class="card-archive-list-date">
+              一月 2024
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/12/">
+            <span class="card-archive-list-date">
+              十二月 2023
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/11/">
+            <span class="card-archive-list-date">
+              十一月 2023
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/10/">
+            <span class="card-archive-list-date">
+              十月 2023
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">54</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">64.6k</div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-08-27T05:32:25.514Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2022 - 2026 By dyx</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.0"></script><script src="/js/main.js?v=5.7.0"></script><script src="/js/tw_cn.js?v=5.7.0"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('/pluginsSrc/typed.js/dist/typed.umd.js?v=3.0.0').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["今日事&#44;今日毕","学会与自己和解","怀古莫要伤今，行走世间，本就是一种积累"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed && typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["今日事&#44;今日毕","学会与自己和解","怀古莫要伤今，行走世间，本就是一种积累"])
+}
+typedJSFn.run(subtitleType)</script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="/pluginsSrc/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js?v=1.1.6"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="/pluginsSrc/butterfly-extsrc/dist/canvas-nest.min.js?v=1.1.6"></script><script id="click-heart" src="/pluginsSrc/butterfly-extsrc/dist/click-heart.min.js?v=1.1.6" async="async" mobile="true"></script><script src="/pluginsSrc/pjax/pjax.min.js?v=0.2.8" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:description\"]","link[rel=\"canonical\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"]):not([data-fancybox])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      if (!item.parentNode) return
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || ''
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    const responseURL = e.request && e.request.responseURL
+    if (e.request && e.request.status === 404) {
+      true
+        ? pjax.loadUrl('/404.html')
+        : responseURL && (window.location.href = responseURL)
+    } else if (responseURL) {
+      window.location.href = responseURL
+    }
+  })
+})</script></div></body></html>
